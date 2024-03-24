@@ -1,9 +1,9 @@
 {
+  "homepage": "https://irene-lab80.github.io/neoflex-project",
   "name": "neoflex-project2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://irene-lab80.github.io/neoflex-project",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
