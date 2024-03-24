@@ -7,13 +7,12 @@ import {MainLayout} from "./layouts";
 import {Cart} from "./routes/cart";
 import "normalize.css";
 import {ROUTES} from "./components/footer/ui/Footer";
+import CartContextProvider from "./provider";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
-    // errorElement: <ErrorPage />,
-    // loader: rootLoader,
     children: [
       {
         // path: "/",
@@ -27,10 +26,13 @@ const router = createBrowserRouter([
       },
     ],
   },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartContextProvider>
+      <RouterProvider router={router} />
+    </CartContextProvider>
   </React.StrictMode>
 );

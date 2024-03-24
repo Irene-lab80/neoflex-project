@@ -21,11 +21,11 @@
   margin-bottom: 11px;
 }
 
-.listItem a {
+.link {
   text-decoration: none;
-  color: black;
   font-weight: 400;
   font-size: 17px;
+  color: black;
 }
 
 .socials {

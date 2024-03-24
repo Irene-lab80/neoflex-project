@@ -6,7 +6,7 @@ import style from "./MainLayout.module.css";
 export const MainLayout = () => {
   return (
     <div className={style.wrapper}>
-      <Header></Header>
+      <Header/>
       <div className={style.outlet}>
         <Outlet />
       </div>

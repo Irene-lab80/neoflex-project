@@ -5,6 +5,11 @@
   position: relative;
 }
 
+.wrapper:hover>svg>path {
+  fill: rgb(90, 87, 81);
+  transition: 0.3s
+}
+
 .count {
   position: absolute;
   top: -30%;
