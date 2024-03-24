@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import {HomePage} from "./routes/home";
-import {RouterProvider, createBrowserRouter} from "react-router-dom";
+import {RouterProvider, createHashRouter} from "react-router-dom";
 import {MainLayout} from "./layouts";
 import {Cart} from "./routes/cart";
 import "normalize.css";
 import {ROUTES} from "./components/footer/ui/Footer";
 import CartContextProvider from "./provider";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <MainLayout />,
