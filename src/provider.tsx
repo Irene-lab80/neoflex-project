@@ -1,4 +1,4 @@
-import {createContext, useContext, useEffect, useState} from "react";
+import {createContext, useEffect, useState} from "react";
 
 export const CartContext = createContext<any | null>(null);
 
@@ -19,7 +19,7 @@ const cartContextProvider = (props: any) => {
     setCart((prev_cart: any) => [...prev_cart, cart_item]);
   };
 
-  const removeItem = (playerId: number) => {
+  const removeItem = () => {
     console.log("remove");
     // setCart((prev: any) => ({
     //   ...prev,
