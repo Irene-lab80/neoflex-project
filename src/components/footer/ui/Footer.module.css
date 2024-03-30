@@ -11,6 +11,12 @@
   width: 100%;
 }
 
+.list_wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -33,4 +39,15 @@
   align-items: center;
   gap: 18px;
   height: fit-content;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.language>span:hover {
+  color: orange;
+  cursor: pointer;
 }
