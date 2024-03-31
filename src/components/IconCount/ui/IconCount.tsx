@@ -1,12 +1,12 @@
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 import style from "./IconCount.module.css";
 
 type TProps = {
   children: ReactNode;
-  count: any;
+  count: number;
 };
 
-export const IconCount = ({children, count}: TProps) => {
+export const IconCount = ({ children, count }: TProps) => {
   return (
     <div className={style.wrapper}>
       {children}
