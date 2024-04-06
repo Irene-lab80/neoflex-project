@@ -14,6 +14,7 @@ export const CardsList = ({ cart, onRemove, onAdd, onDelete }: TProps) => {
     <div className={style.cards_list}>
       {cart.map((cart_item) => (
         <Card
+          key={cart_item.id}
           count={cart_item.count}
           img={cart_item.img}
           price={cart_item.price}

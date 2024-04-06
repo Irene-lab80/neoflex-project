@@ -1,3 +1,4 @@
+import { formatPrice } from "@/utils/helpers";
 import style from "./Card.module.css";
 
 type TProps = {
@@ -81,13 +82,13 @@ export const Card = ({
       </div>
       <div className={style.card_middle}>
         <h4>{title}</h4>
-        <span>{price}</span>
+        <span>{price.toLocaleString("ru-RU")}</span>
       </div>
       <div className={style.card_right}>
         <button className={style.delete_button} onClick={onDelete}>
           <TrashIcon />
         </button>
-        <div>{`${total} ₽`}</div>
+        <div>{`${formatPrice(total)}`}</div>
       </div>
     </div>
   );
