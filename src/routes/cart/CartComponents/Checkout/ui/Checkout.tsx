@@ -7,7 +7,7 @@ type TProps = {
   onCheckout: () => void;
 };
 
-export const Checkout = ({ total, onCheckout }: TProps) => {
+export const Checkout = ({ total }: TProps) => {
   const [open, setOpen] = useState(false);
 
   return (
