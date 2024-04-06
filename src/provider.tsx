@@ -31,16 +31,15 @@ const cartContextProvider = ({ children }: TContextProviderProps) => {
   const [cart, setCart] = useState<TCartItem[]>(getInitialState);
 
   useEffect(() => {
+    console.log("cart", cart);
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const addItem = (cart_item: TCartItem) => {
     const element_index = cart.findIndex((el) => el.id === cart_item.id);
-
     if (element_index === -1) {
       const new_item = { ...cart_item };
       new_item.count += 1;
-
       setCart([...cart, new_item]);
     } else {
       const new_cart = [...cart];

@@ -1,0 +1,22 @@
+.cards_wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
+}
+
+.cards_wrapper > div {
+  width: calc((100% - 30px * 2) / 3);
+
+  @media (max-width: 768px) {
+    width: calc((100% - 16px) / 2);
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}
