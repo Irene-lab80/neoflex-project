@@ -63,7 +63,7 @@
   border: none;
   cursor: pointer;
   transition: 0.3s;
-
+  color: var(--black)
 }
 
 .card_buttton:hover {
