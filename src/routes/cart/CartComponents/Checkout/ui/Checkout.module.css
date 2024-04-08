@@ -9,13 +9,3 @@
   justify-content: space-between;
   padding: 21px 21px 15px;
 }
-
-.checkout_button {
-  width: 100%;
-  padding: 22px;
-  background: #101010;
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px 0px #00000040;
-  color: #ffffff;
-
-}
