@@ -38,24 +38,22 @@ export const Card = ({
   const handleOpenModal = () => setModalOpen(true);
   const handleCloseModal = () => setModalOpen(false);
 
-  const shareData = {
-    title: "MDN",
-    text: "Learn web development on MDN!",
-    url: "https://developer.mozilla.org",
-  };
+  // const shareData = {
+  //   title: "MDN",
+  //   text: "Learn web development on MDN!",
+  //   url: "https://developer.mozilla.org",
+  // };
 
-  const resultPara = document.querySelector(".result");
-
-  // Share must be triggered by "user activation"
   const share = async () => {
-    try {
-      await navigator.share(shareData);
-      //@ts-ignore
-      resultPara.textContent = "MDN shared successfully";
-    } catch (err) {
-      //@ts-ignore
-      resultPara.textContent = `Error: ${err}`;
-    }
+    console.log("navigator.canShare", navigator.canShare());
+    alert(navigator.canShare());
+    // try {
+    //   await navigator.share(shareData);
+    //   alert("+");
+    // } catch (err) {
+    //   alert("-");
+    //   console.log("err", err);
+    // }
   };
   return (
     <div className={style.card} onClick={handleOpenModal}>
@@ -83,7 +81,6 @@ export const Card = ({
       <Modal open={modalOpen} onClose={handleCloseModal}>
         <Img className={style.card_image} src={img} />
         <button onClick={() => share()}>
-          {" "}
           <ShareIcon />
         </button>
       </Modal>
