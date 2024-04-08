@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
   padding: 1px 7px;
-  background: #FFA542;
+  background: var(--orange);
   border-radius: 50px;
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;

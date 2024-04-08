@@ -7,6 +7,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --white: #ffffff;
+  --orange: #FFA542;
+  --grey: #838383;
 }
 
 * {
@@ -51,4 +54,15 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+button {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
 }

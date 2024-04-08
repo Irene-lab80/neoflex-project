@@ -1,8 +1,10 @@
 import { useState } from "react";
-import style from "./Checkout.module.css";
 import { Button, Modal } from "@/components";
 import { formatPrice } from "@/utils/helpers";
 import { CheckoutForm } from "@/components/CheckoutForm";
+
+import style from "./Checkout.module.css";
+
 type TProps = {
   total: number;
   onCheckout: () => void;

@@ -31,7 +31,6 @@ const cartContextProvider = ({ children }: TContextProviderProps) => {
   const [cart, setCart] = useState<TCartItem[]>(getInitialState);
 
   useEffect(() => {
-    console.log("cart", cart);
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 

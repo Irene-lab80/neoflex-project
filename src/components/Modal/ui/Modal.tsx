@@ -1,4 +1,5 @@
 import { ReactNode, useEffect, useRef } from "react";
+import { ReactPortal } from "@/components/ReactPortal";
 
 type TProps = { open: boolean; children: ReactNode; onClose: () => void };
 
@@ -6,7 +7,6 @@ import style from "./Modal.module.css";
 
 export const Modal = ({ open, onClose, children }: TProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
-  console.log("open", open);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -24,7 +24,7 @@ export const Modal = ({ open, onClose, children }: TProps) => {
   }, []);
 
   return (
-    <>
+    <ReactPortal wrapperId="react-portal-modal-container">
       {open && (
         <div className={style.modal_container}>
           <div ref={modalRef} className={style.modal}>
@@ -36,6 +36,6 @@ export const Modal = ({ open, onClose, children }: TProps) => {
           </div>
         </div>
       )}
-    </>
+    </ReactPortal>
   );
 };
