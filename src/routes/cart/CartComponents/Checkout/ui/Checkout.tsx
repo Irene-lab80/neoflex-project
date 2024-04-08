@@ -1,7 +1,10 @@
 import { useState } from "react";
-import style from "./Checkout.module.css";
-import { Modal } from "@/components";
+import { Button, Modal } from "@/components";
 import { formatPrice } from "@/utils/helpers";
+import { CheckoutForm } from "@/components/CheckoutForm";
+
+import style from "./Checkout.module.css";
+
 type TProps = {
   total: number;
   onCheckout: () => void;
@@ -16,16 +19,17 @@ export const Checkout = ({ total }: TProps) => {
         <div>Итого</div>
         <div>{formatPrice(total)}</div>
       </div>
-      <button
+
+      <Button
         type="button"
         className={style.checkout_button}
         onClick={() => setOpen(true)}
       >
         Перейти к оформлению
-      </button>
+      </Button>
 
       <Modal open={open} onClose={() => setOpen(false)}>
-        123
+        <CheckoutForm />
       </Modal>
     </div>
   );

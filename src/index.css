@@ -7,6 +7,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --white: #ffffff;
+  --orange: #FFA542;
+  --grey: #838383;
 }
 
 * {
@@ -41,4 +44,25 @@ h6 {
 a:hover {
   color: orange;
   transition: color 0.3s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
 }

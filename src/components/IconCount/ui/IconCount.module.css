@@ -17,13 +17,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
-  background: #FFA542;
+  padding: 1px 7px;
+  background: var(--orange);
   border-radius: 50px;
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  padding-top: 0.3px;
 }
