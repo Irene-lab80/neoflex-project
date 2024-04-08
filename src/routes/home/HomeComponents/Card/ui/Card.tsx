@@ -38,11 +38,11 @@ export const Card = ({
   const handleOpenModal = () => setModalOpen(true);
   const handleCloseModal = () => setModalOpen(false);
 
-  const shareData = {
-    title: "MDN",
-    text: "Learn web development on MDN!",
-    url: "https://developer.mozilla.org",
-  };
+  // const shareData = {
+  //   title: "MDN",
+  //   text: "Learn web development on MDN!",
+  //   url: "https://developer.mozilla.org",
+  // };
 
   const share = async () => {
     console.log("navigator.canShare", navigator.canShare());
