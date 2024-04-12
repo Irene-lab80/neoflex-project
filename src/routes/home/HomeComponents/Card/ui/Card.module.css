@@ -8,6 +8,8 @@
   background: var(--white);
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
   cursor: pointer;
+  color: black;
+  text-decoration: none;
 
   @media (max-width: 768px) {
     gap: 20px;
@@ -18,13 +20,14 @@
   }
 }
 
+
+
 .card:hover {
-  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
 }
 
 .card_title {
   overflow: hidden;
-
   line-break: none;
   text-overflow: ellipsis;
 }
@@ -63,7 +66,8 @@
   border: none;
   cursor: pointer;
   transition: 0.3s;
-  color: var(--black)
+  padding: 2px 8px;
+  color: var(--black);
 }
 
 .card_buttton:hover {
@@ -79,4 +83,5 @@
 
 .card_price {
   color: var(--orange);
+
 }

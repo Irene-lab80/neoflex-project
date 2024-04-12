@@ -1,6 +1,7 @@
 .wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   background: #FFFFFF;
   max-width: 1110px;
   margin: 0 auto;
@@ -9,12 +10,15 @@
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   width: 100%;
+
+  @media (max-width: 678px) {
+    grid-template-columns: auto;
+  }
 }
 
 .list_wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 150px;
 }
 
 .list {
@@ -39,6 +43,12 @@
   align-items: center;
   gap: 18px;
   height: fit-content;
+  margin-left: auto;
+
+  @media (max-width: 678px) {
+
+    margin-left: 0;
+  }
 }
 
 .language {

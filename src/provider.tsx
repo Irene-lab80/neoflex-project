@@ -7,6 +7,7 @@ export type TCartItem = {
   rate: number;
   price: number;
   count: number;
+  description: string;
 };
 
 type TContext = {
