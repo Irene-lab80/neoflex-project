@@ -14,7 +14,11 @@ export const CardsList = ({ data, addToCart, countNumberInCart }: TProps) => {
       {data.map((el: any) => (
         <Card
           key={el.id}
-          addToCart={() => addToCart(el)}
+          id={el.id}
+          addToCart={(e) => {
+            e.preventDefault();
+            addToCart(el);
+          }}
           img={el.img}
           price={el.price}
           rate={el.rate}

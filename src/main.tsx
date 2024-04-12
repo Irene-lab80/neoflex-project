@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import { HomePage } from "./routes/home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { MainLayout } from "./layouts";
-import { Cart } from "./routes/cart";
-import "normalize.css";
 import { ROUTES } from "./components/footer/ui/Footer";
 import CartContextProvider from "./provider";
-import { Error } from "./routes";
+import { Error, ProductPage, HomePage, Cart } from "./routes";
+
+import "normalize.css";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: ROUTES.CART,
         element: <Cart />,
+      },
+      {
+        path: `${ROUTES.PRODUCT}/:product_id`,
+        element: <ProductPage />,
         index: true,
       },
     ],

@@ -42,11 +42,6 @@ h6 {
   margin: 0;
 }
 
-a:hover {
-  color: orange;
-  transition: color 0.3s;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
