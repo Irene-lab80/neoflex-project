@@ -31,3 +31,12 @@
   white-space: nowrap;
   margin-top: 12px;
 }
+
+.buttonsWrapper {
+  display: flex;
+  gap: 30px;
+
+  >div {
+    width: 30%;
+  }
+}
