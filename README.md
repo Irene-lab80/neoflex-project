@@ -1,31 +1,32 @@
-# React + TypeScript + Vite
+[deploy](https://neoflex-project-ecru.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# QPick
+SPA created with React/TypeScript
 
-Currently, two official plugins are available:
+## General info
+Created with no external library for state management, state management is implemented using localstorage and useContext.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+Project is created with:
+* React: ^18.2.64
+* TypeScript: ^5.2.2
+* React-router-dom: v6.4.1
+* Vite": 5.1.6
 
-## Expanding the ESLint configuration
+## Features
+1. Main page with a list of products,
+   * From which, user can add product to cart or go to product page
+3. Product page with extra info about products
+4. Cart page with checkout form
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setup
+To run this project, download and install it locally using npm:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+$ git clone https://github.com/Irene-lab80/neoflex-project.git
+$ cd ./neoflex-project
+$ npm install
+$ npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# neoflex-project
+
