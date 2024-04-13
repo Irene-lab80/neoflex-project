@@ -1,2 +1,2 @@
 export const formatPrice = (price: number) =>
-  `${price.toLocaleString("ru-RU")} ₽`;
+  price ? `${price.toLocaleString("ru-RU")} ₽` : "";

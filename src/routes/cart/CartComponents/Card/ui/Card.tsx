@@ -1,5 +1,6 @@
 import { formatPrice } from "@/utils/helpers";
 import style from "./Card.module.css";
+import { CartButtons } from "@/shared";
 
 type TProps = {
   img: string;
@@ -70,19 +71,11 @@ export const Card = ({
     <div className={style.card}>
       <div className={style.card_left}>
         <img className={style.img} src={img} alt={title} />
-        <div className={style.buttons}>
-          <button onClick={onRemove}>
-            <MinusIcon />
-          </button>
-          <span>{count}</span>
-          <button onClick={onAdd}>
-            <PlusIcon />
-          </button>
-        </div>
+        <CartButtons count={count} onAdd={onAdd} onRemove={onRemove} />
       </div>
       <div className={style.card_middle}>
         <h4>{title}</h4>
-        <span>{price.toLocaleString("ru-RU")}</span>
+        <span>{formatPrice(price)}</span>
       </div>
       <div className={style.card_right}>
         <button className={style.delete_button} onClick={onDelete}>

@@ -26,8 +26,6 @@
   object-fit: contain;
 }
 
-.card_left {}
-
 .card_middle {
   margin-top: 58px;
 }
@@ -41,12 +39,4 @@
 
 .delete_button {
   align-self: end;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 17px;
 }

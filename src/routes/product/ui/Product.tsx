@@ -1,18 +1,22 @@
 import { getProductById } from "@/utils/data";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import style from "./Product.module.css";
 import { Button, Img } from "@/components";
-import { TCartItem } from "@/provider";
+import { CartContext, TCartItem } from "@/provider";
 import { Rating } from "@/routes/home/HomeComponents/Card/ui/Card";
 import { formatPrice } from "@/utils/helpers";
+import { CartButtons } from "@/shared";
 
 export const ProductPage = () => {
   const [product, setProduct] = useState<TCartItem>();
-
+  const { addItem, removeItem, cart } = useContext(CartContext);
   const { product_id } = useParams();
-  console.log(product);
+
+  const countNumberInCart = (id: number) =>
+    cart.find((item: TCartItem) => item.id === id)?.count;
+
   useEffect(() => {
     if (!product_id) return;
 
@@ -34,9 +38,19 @@ export const ProductPage = () => {
           </div>
           <div className={style.priceWrapper}>
             <div className={style.price}>{formatPrice(product.price)}</div>
-            <Button className={style.button}>В корзину</Button>
           </div>
-
+          <div className={style.buttonsWrapper}>
+            {countNumberInCart(product.id) && (
+              <CartButtons
+                count={countNumberInCart(product.id) || 0}
+                onAdd={() => addItem(product)}
+                onRemove={() => removeItem(product)}
+              />
+            )}
+            <Button className={style.button} onClick={() => addItem(product)}>
+              {countNumberInCart(product.id) ? "Добавить еще" : "В корзину"}
+            </Button>
+          </div>
           <p>{product.description}</p>
         </div>
       </div>
