@@ -1,19 +1,29 @@
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 import style from "./Error.module.css";
+import { useEffect, useState } from "react";
 
 export const Error = () => {
+  const [errorStatus, setErrorStatus] = useState<number | string>();
+  const [errorMessage, setErrorMessage] = useState<number | string>();
+
   const error = useRouteError();
   console.error(error);
-  let errorMessage: string;
 
-  if (isRouteErrorResponse(error)) {
-    errorMessage = error?.data?.message || error.statusText;
-  } else if (typeof error === "string") {
-    errorMessage = error;
-  } else {
-    console.error(error);
-    errorMessage = "Unknown error";
-  }
+  useEffect(() => {
+    if (isRouteErrorResponse(error)) {
+      setErrorMessage(error?.data?.message || error.statusText);
+      setErrorStatus(error?.status);
+    } else if (typeof error === "string") {
+      setErrorMessage(error);
+    } else {
+      setErrorMessage("Unknown error");
+    }
+  }, []);
 
-  return <h3 className={style.wrapper}>{errorMessage}</h3>;
+  return (
+    <div className={style.wrapper}>
+      <h1 className={style.status}>{errorStatus}</h1>
+      <h3>{errorMessage}</h3>
+    </div>
+  );
 };
