@@ -9,6 +9,7 @@
   background: rgba(0, 0, 0, 0.4);
   align-items: center;
   justify-content: center;
+
 }
 
 .modal {
@@ -17,6 +18,11 @@
   padding: 24px;
   position: relative;
   border-radius: 5px;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    padding: 12px;
+  }
 }
 
 .close {
