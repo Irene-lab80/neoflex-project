@@ -1,9 +1,11 @@
 import { CartContext, TCartItem } from "@/provider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import style from "./Cart.module.css";
 import { CardsList, Checkout } from "../CartComponents";
 
 export const Cart = () => {
+  const [state, setState] = useState();
+  // test 2
   const { addItem, cart, removeItem, deleteEntireItem } =
     useContext(CartContext);
 
