@@ -14,8 +14,7 @@ Project is created with:
 * Vite": 5.1.6
 
 ## Features
-1. Main page with a list of products,
-   * From which, user can add product to cart or go to product page
+1. Main page with a list of products, from which, user can add product to cart or go to product page
 3. Product page with extra info about products
 4. Cart page with checkout form
 
